@@ -48,7 +48,18 @@ public class StartMenu {
         buttonBar.getChildren().addAll(StartGame, Tutorial, Exit);
         buttonBar.setAlignment(Pos.CENTER);
 
-        Scene aaa = new Scene(mainMenu, 300,400);
+        Scene Menu = new Scene(mainMenu, 300,400);
+
+        Tutorial.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent arg0) {
+                ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).setScene(HowToPlayMenu.TutorialConst());
+            }
+            
+        });
+
+        Exit.setCancelButton(true);
         Exit.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
@@ -57,6 +68,7 @@ public class StartMenu {
             }
             
         });
-        return(aaa);
+
+        return(Menu);
     }
 }
