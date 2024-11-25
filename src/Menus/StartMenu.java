@@ -21,17 +21,17 @@ public class StartMenu {
 
         Button StartGame = new Button("Play");
         Button Tutorial = new Button("How To Play");
-        Button Exit = new Button("Close");
+        Button Exit = new Button("Exit");
         
 
 
         try {
-            final ImageView Title = new ImageView(new Image(new FileInputStream("src\\Images\\TitleScreen.png")));
+            ImageView Title = new ImageView(new Image(new FileInputStream("src\\Images\\TitleScreen.png")));
             Title.setX(300);
             Title.setY(300);
             mainMenu.setCenter(Title);
         } catch (Exception e) {
-            System.out.println("Title Image Not Found");
+            System.out.println("Warning: Title Image Missing");
         }
         
 
@@ -49,6 +49,15 @@ public class StartMenu {
         buttonBar.setAlignment(Pos.CENTER);
 
         Scene Menu = new Scene(mainMenu, 300,400);
+
+        StartGame.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent arg0) {
+                ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).setScene(FactionSelect.FactionSelectConst());
+            }
+            
+        });
 
         Tutorial.setOnAction(new EventHandler<ActionEvent>() {
 
