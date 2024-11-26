@@ -44,7 +44,8 @@ public class HowToPlayMenu {
 
             @Override
             public void handle(ActionEvent arg0) {
-                ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).setScene(StartMenu.mainMenuConst());
+                //((Stage)(((Button)arg0.getSource()).getScene().getWindow())).setScene(StartMenu.mainMenuConst());
+                ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
             }
             
         });

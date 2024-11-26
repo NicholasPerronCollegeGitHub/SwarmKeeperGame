@@ -4,6 +4,7 @@ public class MainGameLogic {
 
     static int P1Fac = 0;
     static int P2Fac = 0;
+    Entity[][] boardState = new Entity[20][20];
 
     public static void setP1Fac(int facinput){
         P1Fac = facinput;

@@ -412,6 +412,14 @@ public class FactionSelect {
         StartGame.setPrefHeight(75);
         StartGame.setPrefWidth(600);
         StartGame.setDisable(true);
+        StartGame.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent arg0) {
+                ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).setScene(GameBoard.GameBoardConst());
+            }
+            
+        });
 
         fac1.setBottom(fac1Btns);
         fac2.setBottom(fac2Btns);

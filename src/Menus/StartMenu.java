@@ -63,7 +63,10 @@ public class StartMenu {
 
             @Override
             public void handle(ActionEvent arg0) {
-                ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).setScene(HowToPlayMenu.TutorialConst());
+                //((Stage)(((Button)arg0.getSource()).getScene().getWindow())).setScene(HowToPlayMenu.TutorialConst());
+                Stage tutorial = new Stage();
+                tutorial.setScene(HowToPlayMenu.TutorialConst());
+                tutorial.show();
             }
             
         });
