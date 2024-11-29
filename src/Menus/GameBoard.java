@@ -1,12 +1,16 @@
 package Menus;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TitledPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class GameBoard {
@@ -19,6 +23,7 @@ public class GameBoard {
         ScrollPane mapScroll = new ScrollPane(mapGrid);
         BorderPane mainContent = new BorderPane();
         BorderPane bottomBar = new BorderPane();
+        BorderPane bottomBarMiddle = new BorderPane();
         
 
     for(int c = 0; c < 20; c++){
@@ -50,8 +55,35 @@ public class GameBoard {
 
             @Override
             public void handle(ActionEvent arg0) {
-                // TODO Auto-generated method stub
-                throw new UnsupportedOperationException("Unimplemented method 'handle'");
+                BorderPane infoContainer = new BorderPane();
+                Button close = new Button("Close");
+                VBox infoBox = new VBox();
+
+            TitledPane desc = new TitledPane("Description", new Label("PLACEHOLDER"));
+            TitledPane stats = new TitledPane("Stats", new Label("PLACEHOLDER"));
+            TitledPane abil = new TitledPane("Abilities", new Label("PLACEHOLDER"));
+
+            stats.setExpanded(false);
+            abil.setExpanded(false);
+
+            infoBox.getChildren().addAll(desc, stats, abil);
+
+                close.setPrefWidth(150);
+                close.setOnAction(new EventHandler<ActionEvent>() {
+
+                    @Override
+                    public void handle(ActionEvent arg0) {
+                        ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
+                    }
+                    
+                });
+
+                infoContainer.setCenter(infoBox);
+                infoContainer.setBottom(close);
+                Scene informationWindow = new Scene(infoContainer, 150, 250);
+                Stage InfoWindow = new Stage();
+                InfoWindow.setScene(informationWindow);
+                InfoWindow.show();
             }
             
         });
