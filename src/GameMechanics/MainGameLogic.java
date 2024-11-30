@@ -36,6 +36,8 @@ public class MainGameLogic {
                 boardState[i][j] = new Entity();
             }
         }
+        int[] temp = {0,3};
+        boardState[1][3] = new Entity(temp);
     }
     
 

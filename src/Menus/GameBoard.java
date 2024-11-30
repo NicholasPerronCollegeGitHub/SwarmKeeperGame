@@ -26,6 +26,9 @@ public class GameBoard {
         GridPane ordersGrid = new GridPane();
         Button turnButton = new Button();
         Button selectedInfo = new Button("More Information");
+        Button move = new Button("Move");
+        Button attack = new Button("Attack");
+        Button build = new Button("Spawn/Construct");
         ScrollPane mapScroll = new ScrollPane(mapGrid);
         BorderPane mainContent = new BorderPane();
         BorderPane bottomBar = new BorderPane();
@@ -59,9 +62,10 @@ public class GameBoard {
                     int[] coords = {x,y};
                     MainGameLogic.SelectLoc(coords);
                     selectLoc = coords;
+                    System.out.print(MainGameLogic.getBoardStateatLoc(coords).getPortraitPath());
                     try {
-                        Image prevImg = new Image(new FileInputStream(MainGameLogic.getBoardStateatLoc(selectLoc).getPortraitPath()));
-                        previewImage.setImage(prevImg);
+                        Image prev2Img = new Image(new FileInputStream(MainGameLogic.getBoardStateatLoc(selectLoc).getPortraitPath()));
+                        previewImage.setImage(prev2Img);
                     } catch (FileNotFoundException e) {
                         System.out.println("Warning: Image Portrait File Missing");
                     }
@@ -88,6 +92,18 @@ public class GameBoard {
         bottomBar.setRight(ordersGrid);
         bottomBar.setLeft(selectedInfo);
         bottomBar.setCenter(bottomBarMiddle);
+
+        ordersGrid.add(move, 0 , 0);
+        ordersGrid.add(attack, 0, 1);
+        ordersGrid.add(build, 0 , 2);
+
+        move.setPrefWidth(120);
+        move.setPrefHeight(33);
+        attack.setPrefWidth(120);
+        attack.setPrefHeight(33);
+        build.setPrefWidth(120);
+        build.setPrefHeight(34);
+
         selectedInfo.setPrefHeight(100);
         selectedInfo.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -97,7 +113,10 @@ public class GameBoard {
                 Button close = new Button("Close");
                 VBox infoBox = new VBox();
 
-            TitledPane desc = new TitledPane("Description", new Label("PLACEHOLDER"));
+                Label descript = new Label(MainGameLogic.getBoardStateatLoc(MainGameLogic.getSelectedLoc()).getDesc().toString());
+                descript.setWrapText(true);
+
+            TitledPane desc = new TitledPane("Description", descript);
             TitledPane stats = new TitledPane("Stats", new Label("PLACEHOLDER"));
             TitledPane abil = new TitledPane("Abilities", new Label("PLACEHOLDER"));
 

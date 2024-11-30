@@ -12,7 +12,7 @@ public class Entity {
      private String imgPath = "src\\Images\\Gameplay\\MapTiles\\GamePiece\\UnknownTile.png";
      private String portraitPath = "src\\Images\\Gameplay\\MapTiles\\Portrait\\UnknownTilePortrait.png";
      private String Description;
-     private boolean visible = false;
+     private boolean visible = true;
      private boolean empty = true;
      private boolean capturable = false; //for resource nodes
      private int[] typeID = {0,0}; //1st indicates which faction, 2nd which unit for stats index
@@ -23,14 +23,20 @@ public class Entity {
           speed = StatsIndex.getSpeed(ID);
           sightRange = StatsIndex.getSightRange(ID);
           damage = StatsIndex.getDamage(ID);
+          Description = StatsIndex.getDesc(ID);
           imgPath = StatsIndex.getImg(ID);
           portraitPath = StatsIndex.getPortrait(ID);
           attkRange = StatsIndex.getAttkRange(ID);
           if(ID[0] == 0 && ID[1] == 0){
                empty = true;
           }
+          if(ID[0] == 1 || ID[1] ==2){
+               capturable = true;
+          }else{
+               capturable = false;
+          }
           empty = false;
-          visible = false;
+          //visible = false;
           typeID[0] = ID[0];
           typeID[1] = ID[1];
      }
@@ -40,9 +46,15 @@ public class Entity {
           speed = StatsIndex.getSpeed(ID);
           sightRange = StatsIndex.getSightRange(ID);
           damage = StatsIndex.getDamage(ID);
+          Description = StatsIndex.getDesc(ID);
           imgPath = StatsIndex.getImg(ID);
           portraitPath = StatsIndex.getPortrait(ID);
           attkRange = StatsIndex.getAttkRange(ID);
+          if(ID[0] == 1 || ID[1] == 2){
+               capturable = true;
+          }else{
+               capturable = false;
+          }
           empty = false;
           visible = false;
           typeID[0] = ID[0];
@@ -60,8 +72,10 @@ public class Entity {
           portraitPath = "src\\Images\\Gameplay\\MapTiles\\Portrait\\EmptyTilePortrait.png";
           empty = true;
           visible = true;
+          capturable = false;
           typeID[0] = 0;
           typeID[1] = 0;
+          Description = StatsIndex.getDesc(typeID);
      }
      public boolean isVisible(){
           return(visible);
@@ -80,15 +94,37 @@ public class Entity {
                return("src\\Images\\Gameplay\\MapTiles\\GamePiece\\UnknownTile.png");
           }
      }
+     public String getDesc(){
+          if(visible){
+               return(Description);
+          }else{
+               return("An unseen area, you do not know what is here.");
+          }
+     }
      public void takeDamage(int damageNum){
           health -= damageNum;
           if(health <= 0){
                typeID[0] = 0;
                if(capturable){
                     if(typeID[1] == 1){
-                         
+                         team = 0;
+                    health = StatsIndex.getHealth(typeID);
+                    speed = StatsIndex.getSpeed(typeID);
+                    sightRange = StatsIndex.getSightRange(typeID);
+                    damage = StatsIndex.getDamage(typeID);
+                    imgPath = StatsIndex.getImg(typeID);
+                    portraitPath = StatsIndex.getPortrait(typeID);
+                    attkRange = StatsIndex.getAttkRange(typeID);
+                    Description = StatsIndex.getDesc(typeID);
                     }else{
-                         
+                         team = 0;
+                    health = StatsIndex.getHealth(typeID);
+                    speed = StatsIndex.getSpeed(typeID);
+                    sightRange = StatsIndex.getSightRange(typeID);
+                    damage = StatsIndex.getDamage(typeID);
+                    imgPath = StatsIndex.getImg(typeID);
+                    portraitPath = StatsIndex.getPortrait(typeID);
+                    attkRange = StatsIndex.getAttkRange(typeID);
                     }
                }else{
                     typeID[1] = 0;
@@ -98,6 +134,7 @@ public class Entity {
                     sightRange = StatsIndex.getSightRange(typeID);
                     damage = StatsIndex.getDamage(typeID);
                     imgPath = StatsIndex.getImg(typeID);
+                    Description = StatsIndex.getDesc(typeID);
                     portraitPath = StatsIndex.getPortrait(typeID);
                     attkRange = StatsIndex.getAttkRange(typeID);
                     empty = true;
