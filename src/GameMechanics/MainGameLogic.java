@@ -25,9 +25,19 @@ public class MainGameLogic {
     static int Y2 = -1;
 
     static int selectMode = 0;
+    static int[] selectedLoc = {0,0};
 
+ 
+    static Entity[][] boardState = new Entity[20][20];
 
-    Entity[][] boardState = new Entity[20][20];
+    static{
+        for(int i = 0 ; i < 20; i++){
+            for(int j = 0; j < 20; j++){
+                boardState[i][j] = new Entity();
+            }
+        }
+    }
+    
 
     public static int getCurrentTurn(){
         return(turn);
@@ -41,12 +51,22 @@ public class MainGameLogic {
     }
     public static void setP2Fac(int facinput){
         P2Fac = facinput;
+
     }
     public static int getP2Fac(){
         return(P2Fac);
     }
 
     public static void SelectLoc(int[] coords){
+        if(selectMode == 0){
+            selectedLoc = coords;
+        }
+    }
 
+    public static int[] getSelectedLoc(){
+        return(selectedLoc);
+    }
+    public static Entity getBoardStateatLoc(int[] coords){
+        return(boardState[coords[0]][coords[1]]);
     }
 }

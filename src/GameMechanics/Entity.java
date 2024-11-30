@@ -8,7 +8,13 @@ public class Entity {
      private int speed = 0;
      private int sightRange = 0;
      private int damage = 0;
-     private String imgPath = null;
+     private int attkRange = 0;
+     private String imgPath = "src\\Images\\Gameplay\\MapTiles\\GamePiece\\UnknownTile.png";
+     private String portraitPath = "src\\Images\\Gameplay\\MapTiles\\Portrait\\UnknownTilePortrait.png";
+     private String Description;
+     private boolean visible = false;
+     private boolean empty = true;
+     private boolean capturable = false; //for resource nodes
      private int[] typeID = {0,0}; //1st indicates which faction, 2nd which unit for stats index
 
      public Entity(int[] ID){
@@ -18,7 +24,84 @@ public class Entity {
           sightRange = StatsIndex.getSightRange(ID);
           damage = StatsIndex.getDamage(ID);
           imgPath = StatsIndex.getImg(ID);
+          portraitPath = StatsIndex.getPortrait(ID);
+          attkRange = StatsIndex.getAttkRange(ID);
+          if(ID[0] == 0 && ID[1] == 0){
+               empty = true;
+          }
+          empty = false;
+          visible = false;
           typeID[0] = ID[0];
           typeID[1] = ID[1];
+     }
+     public Entity(int[] ID, int teamOverride){
+          team = teamOverride;
+          health = StatsIndex.getHealth(ID);
+          speed = StatsIndex.getSpeed(ID);
+          sightRange = StatsIndex.getSightRange(ID);
+          damage = StatsIndex.getDamage(ID);
+          imgPath = StatsIndex.getImg(ID);
+          portraitPath = StatsIndex.getPortrait(ID);
+          attkRange = StatsIndex.getAttkRange(ID);
+          empty = false;
+          visible = false;
+          typeID[0] = ID[0];
+          typeID[1] = ID[1];
+     }
+
+     public Entity(){
+          team = 0;
+          health = 0;
+          speed = 0;
+          sightRange = 0;
+          damage = 0;
+          attkRange = 0;
+          imgPath = "src\\Images\\Gameplay\\MapTiles\\GamePiece\\EmptyTile.png";
+          portraitPath = "src\\Images\\Gameplay\\MapTiles\\Portrait\\EmptyTilePortrait.png";
+          empty = true;
+          visible = true;
+          typeID[0] = 0;
+          typeID[1] = 0;
+     }
+     public boolean isVisible(){
+          return(visible);
+     }
+     public String getPortraitPath(){
+          if(visible){
+               return(portraitPath);
+          }else{
+               return("src\\Images\\Gameplay\\MapTiles\\Portrait\\UnknownTilePortrait.png");
+          }
+     }
+     public String getTilePath(){
+          if(visible){
+               return(imgPath);
+          }else{
+               return("src\\Images\\Gameplay\\MapTiles\\GamePiece\\UnknownTile.png");
+          }
+     }
+     public void takeDamage(int damageNum){
+          health -= damageNum;
+          if(health <= 0){
+               typeID[0] = 0;
+               if(capturable){
+                    if(typeID[1] == 1){
+                         
+                    }else{
+                         
+                    }
+               }else{
+                    typeID[1] = 0;
+                    team = 0;
+                    health = StatsIndex.getHealth(typeID);
+                    speed = StatsIndex.getSpeed(typeID);
+                    sightRange = StatsIndex.getSightRange(typeID);
+                    damage = StatsIndex.getDamage(typeID);
+                    imgPath = StatsIndex.getImg(typeID);
+                    portraitPath = StatsIndex.getPortrait(typeID);
+                    attkRange = StatsIndex.getAttkRange(typeID);
+                    empty = true;
+               }
+          }
      }
 }
