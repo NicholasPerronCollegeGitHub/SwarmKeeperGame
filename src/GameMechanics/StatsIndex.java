@@ -17,7 +17,7 @@ public class StatsIndex {
             //Empty Tile
                 healthList[0][0] = 0;
                 speedList[0][0] = 0;
-                sightRangeList[0][0] = 0;
+                sightRangeList[0][0] = -1;
                 damageList[0][0] = 0;
                 attkRangeList[0][0] = 0;
                 imgStubList[0][0] = "src\\Images\\Gameplay\\MapTiles\\GamePiece\\EmptyTile.png";
@@ -27,7 +27,7 @@ public class StatsIndex {
             //Bio. Deposit
                 healthList[0][1] = 999999999; //hopefully prevents destruction and therefore hopefully mitigate unexpected bugs
                 speedList[0][1] = 0;
-                sightRangeList[1][0] = 0;
+                sightRangeList[1][0] = -1;
                 damageList[0][1] = 0;
                 attkRangeList[1][0] = 0;
                 imgStubList[0][1] = "";
@@ -37,7 +37,7 @@ public class StatsIndex {
             //Min. Deposit
                 healthList[0][2] = 999999999; //same as above
                 speedList[0][2] = 0;
-                sightRangeList[2][0] = 0;
+                sightRangeList[2][0] = -1;
                 damageList[0][2] = 0;
                 attkRangeList[2][0] = 0;
                 imgStubList[0][2] = "";

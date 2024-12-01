@@ -8,14 +8,14 @@ public class MainGameLogic {
     static int turn = 0; // 0 is neutral/inbetween turns, 1 is P1, 2 is P2
     static int nextTurn = 1;
 
-    static int P1Bio = 0;
+    static int P1Bio = 10;
     static int P1BioInc = 0;
-    static int P1Min = 0;
+    static int P1Min = 10;
     static int P1MinInc = 0;
 
-    static int P2Bio = 0;
+    static int P2Bio = 10;
     static int P2BioInc = 0;
-    static int P2Min = 0;
+    static int P2Min = 10;
     static int P2MinInc = 0;
 
     static int X1 = -1;
@@ -39,7 +39,7 @@ public class MainGameLogic {
         }
 
         int[] temp = {0,3};
-        boardState[3][1] = new Entity(temp);
+        boardState[3][1] = new Entity(temp, 1);
         boardState[4][2] = new Entity(temp, 2);
     }
     
@@ -68,24 +68,27 @@ public class MainGameLogic {
         }else if(selectMode == 1){
             savedLoc = selectedLoc;
             selectedLoc = coords;
-            if((getBoardStateatLoc(savedLoc).getMovesRemaining() > 0) && (((selectedLoc[0] >= savedLoc[0] - 1)&&(selectedLoc[0] <= savedLoc[0] + 1))&&((selectedLoc[1] >= savedLoc[1] - 1)&&(selectedLoc[1] <= savedLoc[1] + 1)))){
+            if((getBoardStateatLoc(savedLoc).getMovesRemaining() > 0) && (((selectedLoc[0] >= savedLoc[0] - 1)&&(selectedLoc[0] <= savedLoc[0] + 1))&&((selectedLoc[1] >= savedLoc[1] - 1)&&(selectedLoc[1] <= savedLoc[1] + 1))) && (turn == MainGameLogic.getBoardStateatLoc(savedLoc).getTeam()) && getBoardStateatLoc(selectedLoc).getIsEmpty()){
                 Entity tempEntity = new Entity();
                 tempEntity = getBoardStateatLoc(selectedLoc);
                 setBoardStateatLoc(selectedLoc, getBoardStateatLoc(savedLoc));
                 setBoardStateatLoc(savedLoc, tempEntity);
                 getBoardStateatLoc(selectedLoc).move(1);
+                iterateSight();
             }
             selectMode = 0;
         }else if(selectMode == 2){
             savedLoc = selectedLoc;
             selectedLoc = coords;
             int tempRange = getBoardStateatLoc(savedLoc).getAttkRange();
-            if((!getBoardStateatLoc(savedLoc).getHasAttkd()) && (((selectedLoc[0] >= savedLoc[0] - tempRange)&&(selectedLoc[0] <= savedLoc[0] + tempRange))&&((selectedLoc[1] >= savedLoc[1] - tempRange)&&(selectedLoc[1] <= savedLoc[1] + tempRange)))){
+            if((!getBoardStateatLoc(savedLoc).getHasAttkd()) && (((selectedLoc[0] >= savedLoc[0] - tempRange)&&(selectedLoc[0] <= savedLoc[0] + tempRange))&&((selectedLoc[1] >= savedLoc[1] - tempRange)&&(selectedLoc[1] <= savedLoc[1] + tempRange))) && (turn == MainGameLogic.getBoardStateatLoc(savedLoc).getTeam())){
                 if(getBoardStateatLoc(savedLoc).getTeam() != getBoardStateatLoc(selectedLoc).getTeam() && getBoardStateatLoc(selectedLoc).getTeam() != 0){
                     getBoardStateatLoc(selectedLoc).takeDamage(getBoardStateatLoc(savedLoc).getDamage());
                     getBoardStateatLoc(savedLoc).setHasAttkd(true);
+                    iterateSight();
                 }
             }
+            
             selectMode = 0;
         }
     }
@@ -128,7 +131,115 @@ public class MainGameLogic {
     public static void setSelectMode(int newMode) {
         selectMode = newMode;
     }
-    public static void reiterateSight(){
-        //PLACEHOLDERCODE TODO:WRITE_FOW_CODE
+    public static void iterateSight(){
+        for(int a = 0; a < 20; a++){
+            for(int b = 0; b < 20; b++){
+                int[] temp = {a,b};
+                try {
+                    getBoardStateatLoc(temp).setVisible(false);
+                } catch (Exception e) {
+                    // As stated Below
+                    continue;
+                }
+
+            }
+        }
+        if(turn != 0){ 
+            for(int a = 0; a < 20; a++){
+                for(int b = 0; b < 20; b++){
+                    int[] temp = {a,b};
+                    if(turn == (getBoardStateatLoc(temp).getTeam())){
+                        for(int c = (a - getBoardStateatLoc(temp).getSightRange()); c <= (a + getBoardStateatLoc(temp).getSightRange()); c++){
+                            for(int d = (b - getBoardStateatLoc(temp).getSightRange()); d <= (b + getBoardStateatLoc(temp).getSightRange()); d++){
+                                try {
+                                    getBoardStateatLoc(new int[] {c,d}).setVisible(true);
+                                } catch (Exception e) {
+                                    //Nothing needs to be done here, prevents errors when out of bounds
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    public static void nextTurn() {
+        int bioProduce = 0;
+        int minProduce = 0;
+        if(turn == 0){
+            turn = nextTurn;
+            if(nextTurn == 1){
+                nextTurn = 2;
+            }else if( nextTurn == 2){
+                nextTurn = 1;
+            }
+        }else if(turn == 1){
+            for(int a = 0; a < 20; a++){
+                for(int b = 0; b < 20; b++){
+                    int[] temp = new int[] {a , b};
+                    if(getBoardStateatLoc(temp).getTeam() == turn){
+                        getBoardStateatLoc(temp).newTurn();
+                    }
+                    if(getBoardStateatLoc(temp).getID()[1] == 1){
+                        bioProduce++;
+                    }
+                    if(getBoardStateatLoc(temp).getID()[1] == 2){
+                        minProduce++;
+                    }
+                }
+            }
+            P1Bio += (5 + (5*(bioProduce)));
+            P1Min += (5 + (5*(minProduce)));
+            turn = 0;
+        }else if(turn == 2){
+            for(int a = 0; a < 20; a++){
+                for(int b = 0; b < 20; b++){
+                    int[] temp = new int[] {a , b};
+                    if(getBoardStateatLoc(temp).getTeam() == turn){
+                        getBoardStateatLoc(temp).newTurn();
+                    }
+                    if(getBoardStateatLoc(temp).getID()[1] == 1){
+                        bioProduce++;
+                    }
+                    if(getBoardStateatLoc(temp).getID()[1] == 2){
+                        minProduce++;
+                    }
+                }
+            }
+            P2Bio += (5 + (5*(bioProduce)));
+            P2Min += (5 + (5*(minProduce)));
+            turn = 0;
+            
+        }
+    }
+
+    public static int getCurrentBio() {
+        if(turn == 1){
+            return(P1Bio);
+        }else if(turn == 2){
+            return(P2Bio);
+        }else{
+            return(0);
+        }
+    }
+
+    public static int getCurrentMin() {
+        if(turn == 1){
+            return(P1Min);
+        }else if(turn == 2){
+            return(P2Min);
+        }else{
+            return(0);
+        }
+    }
+
+    public static String getTurnStatus() {
+        if(turn == 0){
+            return("Start Turn");
+        }else{
+            return("End Turn");
+        }
     }
 }

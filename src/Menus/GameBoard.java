@@ -24,16 +24,19 @@ public class GameBoard {
     public static Scene GameBoardConst(){
         GridPane mapGrid = new GridPane();
         GridPane ordersGrid = new GridPane();
-        Button turnButton = new Button();
+        Button turnButton = new Button("Start Turn");
         Button selectedInfo = new Button("More Information");
         Button move = new Button("Move");
         Button attack = new Button("Attack");
         Button build = new Button("Spawn/Construct");
         ScrollPane mapScroll = new ScrollPane(mapGrid);
+        BorderPane topBar = new BorderPane();
         BorderPane mainContent = new BorderPane();
         BorderPane bottomBar = new BorderPane();
         BorderPane bottomBarMiddle = new BorderPane();
         Label textOutput = new Label("Turn Start");
+        Label bioResource = new Label("Bio: ");
+        Label minResource = new Label("Min: ");
         ImageView previewImage = new ImageView();
         try {
             Image prevImg = new Image(new FileInputStream("src\\Images\\Gameplay\\MapTiles\\Portrait\\UnknownTilePortrait.png"));
@@ -62,7 +65,6 @@ public class GameBoard {
                     int[] coords = {x,y};
                     MainGameLogic.SelectLoc(coords);
                     selectLoc = coords;
-                    //System.out.print(MainGameLogic.getBoardStateatLoc(selectLoc).getTilePath());
                     try {
                         previewImage.setImage(new Image(new FileInputStream(MainGameLogic.getBoardStateatLoc(MainGameLogic.getSelectedLoc()).getPortraitPath())));
                     } catch (FileNotFoundException e) {
@@ -86,12 +88,41 @@ public class GameBoard {
         }
     }        
         mainContent.setCenter(mapScroll);
-        mainContent.setTop(turnButton);
+        mainContent.setTop(topBar);
         mainContent.setBottom(bottomBar);
         
         bottomBar.setRight(ordersGrid);
         bottomBar.setLeft(selectedInfo);
         bottomBar.setCenter(bottomBarMiddle);
+
+        topBar.setCenter(turnButton);
+        topBar.setLeft(bioResource);
+        topBar.setRight(minResource);
+
+        turnButton.setPrefWidth(300);
+        turnButton.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent arg0) {
+                MainGameLogic.nextTurn();
+                MainGameLogic.iterateSight();
+                turnButton.setText(MainGameLogic.getTurnStatus());
+                for(int a = 0 ; a < 20; a ++){
+                    for(int b = 0; b < 20; b ++){
+                        try {
+                            
+                            ((Button)mapGrid.getChildren().get(a + (b * 20))).setGraphic(new ImageView(new Image(new FileInputStream(MainGameLogic.getBoardStateatLoc(new int[] {b , a}).getTilePath()))));
+                        } catch (FileNotFoundException e) {
+                            System.out.println("Warning: Tile Image Missing");
+                        }
+                    }
+                }
+                textOutput.setText(MainGameLogic.getStatus());
+                bioResource.setText("Bio: " + MainGameLogic.getCurrentBio());
+                minResource.setText("Min: " + MainGameLogic.getCurrentMin());
+            }
+            
+        });
 
         ordersGrid.add(move, 0 , 0);
         ordersGrid.add(attack, 0, 1);

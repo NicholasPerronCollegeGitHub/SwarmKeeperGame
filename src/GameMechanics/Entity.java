@@ -38,7 +38,7 @@ public class Entity {
                capturable = false;
           }
           empty = false;
-          //visible = false;
+          visible = false;
           typeID[0] = ID[0];
           typeID[1] = ID[1];
      }
@@ -73,7 +73,7 @@ public class Entity {
           imgPath = "src\\Images\\Gameplay\\MapTiles\\GamePiece\\EmptyTile.png";
           portraitPath = "src\\Images\\Gameplay\\MapTiles\\Portrait\\EmptyTilePortrait.png";
           empty = true;
-          visible = true;
+          visible = false;
           capturable = false;
           typeID[0] = 0;
           typeID[1] = 0;
@@ -167,4 +167,17 @@ public class Entity {
      public int getDamage() {
           return(damage);
      }
+	public int getSightRange() {
+          return(sightRange);
+	}
+    public void setVisible(boolean newVis) {
+     visible = newVis;
+    }
+    public void newTurn(){
+     hasAttkd = false;
+     movesMade = 0;
+    }
+public int[] getID() {
+     return(typeID);
+}
 }
