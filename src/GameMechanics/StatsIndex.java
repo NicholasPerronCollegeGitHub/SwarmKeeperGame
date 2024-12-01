@@ -49,7 +49,7 @@ public class StatsIndex {
                 speedList[0][3] = 4;
                 sightRangeList[0][3] = 2;
                 damageList[0][3] = 100;
-                attkRangeList[0][3] = 1;
+                attkRangeList[0][3] = 4;
                 imgStubList[0][3] = "src\\Images\\Gameplay\\Units\\GamePiece\\Testling.png";
                 PortraitList[0][3] = "src\\Images\\Gameplay\\Units\\Portrait\\TestlingPortrait.png";
                 canBuild[0][3] = true;

@@ -40,6 +40,7 @@ public class MainGameLogic {
 
         int[] temp = {0,3};
         boardState[3][1] = new Entity(temp);
+        boardState[4][2] = new Entity(temp, 2);
     }
     
 
@@ -72,7 +73,18 @@ public class MainGameLogic {
                 tempEntity = getBoardStateatLoc(selectedLoc);
                 setBoardStateatLoc(selectedLoc, getBoardStateatLoc(savedLoc));
                 setBoardStateatLoc(savedLoc, tempEntity);
-                getBoardStateatLoc(selectedLoc).move();
+                getBoardStateatLoc(selectedLoc).move(1);
+            }
+            selectMode = 0;
+        }else if(selectMode == 2){
+            savedLoc = selectedLoc;
+            selectedLoc = coords;
+            int tempRange = getBoardStateatLoc(savedLoc).getAttkRange();
+            if((!getBoardStateatLoc(savedLoc).getHasAttkd()) && (((selectedLoc[0] >= savedLoc[0] - tempRange)&&(selectedLoc[0] <= savedLoc[0] + tempRange))&&((selectedLoc[1] >= savedLoc[1] - tempRange)&&(selectedLoc[1] <= savedLoc[1] + tempRange)))){
+                if(getBoardStateatLoc(savedLoc).getTeam() != getBoardStateatLoc(selectedLoc).getTeam() && getBoardStateatLoc(selectedLoc).getTeam() != 0){
+                    getBoardStateatLoc(selectedLoc).takeDamage(getBoardStateatLoc(savedLoc).getDamage());
+                    getBoardStateatLoc(savedLoc).setHasAttkd(true);
+                }
             }
             selectMode = 0;
         }
@@ -100,6 +112,12 @@ public class MainGameLogic {
         }else if(getBoardStateatLoc(selectedLoc).getTeam() == turn){
             if(selectMode == 1){
                 return("Please select an adjacent tile to move to (" + getBoardStateatLoc(selectedLoc).getMovesRemaining() + " Left)");
+            }else if(selectMode == 2){
+                if(!getBoardStateatLoc(selectedLoc).getHasAttkd()){
+                    return("Please select an enemy within " + getBoardStateatLoc(selectedLoc).getAttkRange() + " tiles.");
+                }else{
+                    return("This Creature has Already Attacked");
+                }
             }
         }else{
             return("Cannot Command Enemy Creature");
@@ -109,5 +127,8 @@ public class MainGameLogic {
 
     public static void setSelectMode(int newMode) {
         selectMode = newMode;
+    }
+    public static void reiterateSight(){
+        //PLACEHOLDERCODE TODO:WRITE_FOW_CODE
     }
 }

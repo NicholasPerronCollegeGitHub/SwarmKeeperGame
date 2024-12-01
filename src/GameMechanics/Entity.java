@@ -152,7 +152,19 @@ public class Entity {
      public int getTeam() {
           return(team);
      }
-     public void move() {
-          movesMade += 1;
+     public void move(int changeBy) {
+          movesMade += changeBy;
+     }
+     public boolean getHasAttkd() {
+          return(hasAttkd);
+     }
+     public void setHasAttkd(boolean newVal){
+          hasAttkd = newVal;
+     }
+     public int getAttkRange() {
+          return(attkRange);
+     }
+     public int getDamage() {
+          return(damage);
      }
 }

@@ -113,6 +113,16 @@ public class GameBoard {
             }
             
         });
+        
+        attack.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent arg0) {
+                MainGameLogic.setSelectMode(2);
+                textOutput.setText(MainGameLogic.getStatus());
+            }
+            
+        });
 
         selectedInfo.setPrefHeight(100);
         selectedInfo.setOnAction(new EventHandler<ActionEvent>() {
