@@ -6,6 +6,7 @@ public class Entity {
      private int team = 0;
      private int health = 0;
      private int speed = 0;
+     private int movesMade = 0;
      private int sightRange = 0;
      private int damage = 0;
      private int attkRange = 0;
@@ -100,6 +101,12 @@ public class Entity {
           }else{
                return("An unseen area, you do not know what is here.");
           }
+     }
+     public int getMovesRemaining(){
+          return(speed - movesMade);
+     }
+     public boolean getIsEmpty(){
+          return(empty);
      }
      public void takeDamage(int damageNum){
           health -= damageNum;

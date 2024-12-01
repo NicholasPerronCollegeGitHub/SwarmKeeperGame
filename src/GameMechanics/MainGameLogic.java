@@ -36,8 +36,9 @@ public class MainGameLogic {
                 boardState[i][j] = new Entity();
             }
         }
+
         int[] temp = {0,3};
-        boardState[1][3] = new Entity(temp);
+        boardState[3][1] = new Entity(temp);
     }
     
 
@@ -63,6 +64,7 @@ public class MainGameLogic {
         if(selectMode == 0){
             selectedLoc = coords;
         }
+        selectedLoc = coords;
     }
 
     public static int[] getSelectedLoc(){
@@ -70,5 +72,18 @@ public class MainGameLogic {
     }
     public static Entity getBoardStateatLoc(int[] coords){
         return(boardState[coords[0]][coords[1]]);
+    }
+
+    public static String getStatus() {
+        if(selectMode == 0){
+            if(turn == 1){
+                return("Player 1 Turn");
+            }else if(turn == 2){
+                return("Player 2 Turn");
+            }else if(turn == 0){
+                return("Press Start Turn to Continue");
+            }
+        }
+        return("This Message Should Not Appear");
     }
 }

@@ -62,10 +62,9 @@ public class GameBoard {
                     int[] coords = {x,y};
                     MainGameLogic.SelectLoc(coords);
                     selectLoc = coords;
-                    System.out.print(MainGameLogic.getBoardStateatLoc(coords).getPortraitPath());
+                    //System.out.print(MainGameLogic.getBoardStateatLoc(selectLoc).getTilePath());
                     try {
-                        Image prev2Img = new Image(new FileInputStream(MainGameLogic.getBoardStateatLoc(selectLoc).getPortraitPath()));
-                        previewImage.setImage(prev2Img);
+                        previewImage.setImage(new Image(new FileInputStream(MainGameLogic.getBoardStateatLoc(MainGameLogic.getSelectedLoc()).getPortraitPath())));
                     } catch (FileNotFoundException e) {
                         System.out.println("Warning: Image Portrait File Missing");
                     }
@@ -73,12 +72,13 @@ public class GameBoard {
                         for(int b = 0; b < 20; b ++){
                             try {
                                 
-                                ((Button)mapGrid.getChildren().get(a + (b * 20))).setGraphic(new ImageView(new Image(new FileInputStream(MainGameLogic.getBoardStateatLoc(new int[] {a , b}).getTilePath()))));
+                                ((Button)mapGrid.getChildren().get(a + (b * 20))).setGraphic(new ImageView(new Image(new FileInputStream(MainGameLogic.getBoardStateatLoc(new int[] {b , a}).getTilePath()))));
                             } catch (FileNotFoundException e) {
                                 System.out.println("Warning: Tile Image Missing");
-                            };
+                            }
                         }
                     }
+                    textOutput.setText(MainGameLogic.getStatus());
                 }
                 
             });
@@ -113,7 +113,7 @@ public class GameBoard {
                 Button close = new Button("Close");
                 VBox infoBox = new VBox();
 
-                Label descript = new Label(MainGameLogic.getBoardStateatLoc(MainGameLogic.getSelectedLoc()).getDesc().toString());
+                Label descript = new Label(MainGameLogic.getBoardStateatLoc(MainGameLogic.getSelectedLoc()).getDesc());
                 descript.setWrapText(true);
 
             TitledPane desc = new TitledPane("Description", descript);
