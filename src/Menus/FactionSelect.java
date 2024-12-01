@@ -98,6 +98,7 @@ public class FactionSelect {
                     MainGameLogic.setP1Fac(1);
                     StartGame.setText("Select Player 2 Faction");
                     P1Selected = true;
+                    fac1Select.setDisable(true);
                 }else if(!P2Selected){
                     MainGameLogic.setP2Fac(1);
                     StartGame.setText("START");
@@ -178,6 +179,7 @@ public class FactionSelect {
                     MainGameLogic.setP1Fac(2);
                     StartGame.setText("Select Player 2 Faction");
                     P1Selected = true;
+                    fac2Select.setDisable(true);
                 }else if(!P2Selected){
                     MainGameLogic.setP2Fac(2);
                     StartGame.setText("START");
@@ -258,6 +260,7 @@ public class FactionSelect {
                     MainGameLogic.setP1Fac(3);
                     StartGame.setText("Select Player 2 Faction");
                     P1Selected = true;
+                    fac3Select.setDisable(true);
                 }else if(!P2Selected){
                     MainGameLogic.setP2Fac(3);
                     StartGame.setText("START");
@@ -339,6 +342,7 @@ public class FactionSelect {
                     MainGameLogic.setP1Fac(4);
                     StartGame.setText("Select Player 2 Faction");
                     P1Selected = true;
+                    fac4Select.setDisable(true);
                 }else if(!P2Selected){
                     MainGameLogic.setP2Fac(4);
                     StartGame.setText("START");

@@ -46,14 +46,14 @@ public class StatsIndex {
                 descList[0][2] = "An outcrop of particularly rich minerals, often used to reinforce the shells of larger creatures."; 
             //Testling <Exists for testing purposes only>
                 healthList[0][3] = 100;
-                speedList[0][3] = 1;
+                speedList[0][3] = 4;
                 sightRangeList[0][3] = 2;
-                damageList[0][3] = 25;
+                damageList[0][3] = 100;
                 attkRangeList[0][3] = 1;
                 imgStubList[0][3] = "src\\Images\\Gameplay\\Units\\GamePiece\\Testling.png";
                 PortraitList[0][3] = "src\\Images\\Gameplay\\Units\\Portrait\\TestlingPortrait.png";
                 canBuild[0][3] = true;
-                descList[0][3] = "An odd creature, rumor has it that this creature shouldn't even exist"; 
+                descList[0][3] = "An odd creature, Rumor has it that this creature shouldn't even exist."; 
         //Faction 1: <NAME>
         //Faction 2: <NAME>
         //Faction 3: <NAME>

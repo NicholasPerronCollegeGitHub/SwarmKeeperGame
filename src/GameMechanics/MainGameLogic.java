@@ -26,6 +26,7 @@ public class MainGameLogic {
 
     static int selectMode = 0;
     static int[] selectedLoc = {0,0};
+    static int[] savedLoc = {0,0};
 
  
     static Entity[][] boardState = new Entity[20][20];
@@ -63,8 +64,18 @@ public class MainGameLogic {
     public static void SelectLoc(int[] coords){
         if(selectMode == 0){
             selectedLoc = coords;
+        }else if(selectMode == 1){
+            savedLoc = selectedLoc;
+            selectedLoc = coords;
+            if((getBoardStateatLoc(savedLoc).getMovesRemaining() > 0) && (((selectedLoc[0] >= savedLoc[0] - 1)&&(selectedLoc[0] <= savedLoc[0] + 1))&&((selectedLoc[1] >= savedLoc[1] - 1)&&(selectedLoc[1] <= savedLoc[1] + 1)))){
+                Entity tempEntity = new Entity();
+                tempEntity = getBoardStateatLoc(selectedLoc);
+                setBoardStateatLoc(selectedLoc, getBoardStateatLoc(savedLoc));
+                setBoardStateatLoc(savedLoc, tempEntity);
+                getBoardStateatLoc(selectedLoc).move();
+            }
+            selectMode = 0;
         }
-        selectedLoc = coords;
     }
 
     public static int[] getSelectedLoc(){
@@ -72,6 +83,9 @@ public class MainGameLogic {
     }
     public static Entity getBoardStateatLoc(int[] coords){
         return(boardState[coords[0]][coords[1]]);
+    }
+    public static void setBoardStateatLoc(int[] coords, Entity temp){
+        boardState[coords[0]][coords[1]] = temp;
     }
 
     public static String getStatus() {
@@ -83,7 +97,17 @@ public class MainGameLogic {
             }else if(turn == 0){
                 return("Press Start Turn to Continue");
             }
+        }else if(getBoardStateatLoc(selectedLoc).getTeam() == turn){
+            if(selectMode == 1){
+                return("Please select an adjacent tile to move to (" + getBoardStateatLoc(selectedLoc).getMovesRemaining() + " Left)");
+            }
+        }else{
+            return("Cannot Command Enemy Creature");
         }
         return("This Message Should Not Appear");
+    }
+
+    public static void setSelectMode(int newMode) {
+        selectMode = newMode;
     }
 }

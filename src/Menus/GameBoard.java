@@ -104,6 +104,16 @@ public class GameBoard {
         build.setPrefWidth(120);
         build.setPrefHeight(34);
 
+        move.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent arg0) {
+                MainGameLogic.setSelectMode(1);
+                textOutput.setText(MainGameLogic.getStatus());
+            }
+            
+        });
+
         selectedInfo.setPrefHeight(100);
         selectedInfo.setOnAction(new EventHandler<ActionEvent>() {
 

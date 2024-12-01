@@ -15,6 +15,7 @@ public class Entity {
      private String Description;
      private boolean visible = true;
      private boolean empty = true;
+     private boolean hasAttkd = false;
      private boolean capturable = false; //for resource nodes
      private int[] typeID = {0,0}; //1st indicates which faction, 2nd which unit for stats index
 
@@ -147,5 +148,11 @@ public class Entity {
                     empty = true;
                }
           }
+     }
+     public int getTeam() {
+          return(team);
+     }
+     public void move() {
+          movesMade += 1;
      }
 }
