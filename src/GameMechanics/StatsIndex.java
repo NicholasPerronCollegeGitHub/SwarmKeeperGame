@@ -55,9 +55,49 @@ public class StatsIndex {
                 canBuild[0][3] = true;
                 descList[0][3] = "An odd creature, Rumor has it that this creature shouldn't even exist."; 
         //Faction 1: <NAME>
+            //Main Base:
+                healthList[1][0] = 1000;
+                speedList[1][0] = 0;
+                sightRangeList[1][0] = 3;
+                damageList[1][0] = 0;
+                attkRangeList[1][0] = 0;
+                imgStubList[1][0] = "";
+                PortraitList[1][0] = "";
+                canBuild[1][0] = true;
+                descList[1][0] = "The main hive of the <NAMEHERE>. Destruction of this leads to a victory for the opposing hive."; 
         //Faction 2: <NAME>
+            //Main Base:
+                healthList[2][0] = 1000;
+                speedList[2][0] = 0;
+                sightRangeList[2][0] = 3;
+                damageList[2][0] = 0;
+                attkRangeList[2][0] = 0;
+                imgStubList[2][0] = "";
+                PortraitList[2][0] = "";
+                canBuild[2][0] = true;
+                descList[2][0] = "The main hive of the <NAMEHERE>. Destruction of this leads to a victory for the opposing hive.";
         //Faction 3: <NAME>
+            //Main Base:
+                healthList[3][0] = 1000;
+                speedList[3][0] = 0;
+                sightRangeList[3][0] = 3;
+                damageList[3][0] = 0;
+                attkRangeList[3][0] = 0;
+                imgStubList[3][0] = "";
+                PortraitList[3][0] = "";
+                canBuild[3][0] = true;
+                descList[3][0] = "The main hive of the <NAMEHERE>. Destruction of this leads to a victory for the opposing hive.";
         //Faction 4: <NAME>
+            //Main Base:
+                healthList[4][0] = 1000;
+                speedList[4][0] = 0;
+                sightRangeList[4][0] = 3;
+                damageList[4][0] = 0;
+                attkRangeList[4][0] = 0;
+                imgStubList[4][0] = "";
+                PortraitList[4][0] = "";
+                canBuild[4][0] = true;
+                descList[4][0] = "The main hive of the <NAMEHERE>. Destruction of this leads to a victory for the opposing hive.";
     }
 
 

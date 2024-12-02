@@ -420,6 +420,7 @@ public class FactionSelect {
 
             @Override
             public void handle(ActionEvent arg0) {
+                MainGameLogic.StartGame();
                 ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).setScene(GameBoard.GameBoardConst());
             }
             

@@ -41,10 +41,12 @@ public class MainGameLogic {
         int[] temp = {0,3};
         boardState[3][1] = new Entity(temp, 1);
         boardState[4][2] = new Entity(temp, 2);
+    }
+    
+    public static void StartGame(){
         boardState[4][4] = new Entity(new int[] {P1Fac, 0}, 1);
         boardState[15][15] = new Entity(new int[] {P2Fac, 0}, 2);
     }
-    
 
     public static int getCurrentTurn(){
         return(turn);
@@ -124,7 +126,7 @@ public class MainGameLogic {
                     return("This Creature has Already Attacked");
                 }
             }else if(selectMode == 4){
-                return("Please select a tile to create the selected object.");
+                return("Please select an object to create.");
             }
         }else{
             return("Cannot Command Enemy Creature");
