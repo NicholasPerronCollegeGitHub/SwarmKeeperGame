@@ -175,18 +175,19 @@ public class GameBoard {
                 BorderPane infoContainer = new BorderPane();
                 Button close = new Button("Close");
                 VBox infoBox = new VBox();
+                ScrollPane infoScroll = new ScrollPane(infoBox);
+
+                infoScroll.setFitToWidth(true);
 
                 Label descript = new Label(MainGameLogic.getBoardStateatLoc(MainGameLogic.getSelectedLoc()).getDesc());
                 descript.setWrapText(true);
 
             TitledPane desc = new TitledPane("Description", descript);
-            TitledPane stats = new TitledPane("Stats", new Label("PLACEHOLDER"));
-            TitledPane abil = new TitledPane("Abilities", new Label("PLACEHOLDER"));
+            TitledPane stats = new TitledPane("Stats", new Label(MainGameLogic.getSelectedStatsAdvanced()));
 
             stats.setExpanded(false);
-            abil.setExpanded(false);
 
-            infoBox.getChildren().addAll(desc, stats, abil);
+            infoBox.getChildren().addAll(desc, stats);
 
                 close.setPrefWidth(150);
                 close.setOnAction(new EventHandler<ActionEvent>() {
@@ -198,7 +199,7 @@ public class GameBoard {
                     
                 });
 
-                infoContainer.setCenter(infoBox);
+                infoContainer.setCenter(infoScroll);
                 infoContainer.setBottom(close);
                 Scene informationWindow = new Scene(infoContainer, 150, 250);
                 Stage InfoWindow = new Stage();

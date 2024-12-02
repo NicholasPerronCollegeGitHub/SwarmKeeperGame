@@ -40,7 +40,6 @@ public class Entity {
                capturable = false;
           }
           empty = false;
-          visible = false;
           typeID[0] = ID[0];
           typeID[1] = ID[1];
      }
