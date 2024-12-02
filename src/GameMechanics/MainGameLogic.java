@@ -41,6 +41,8 @@ public class MainGameLogic {
         int[] temp = {0,3};
         boardState[3][1] = new Entity(temp, 1);
         boardState[4][2] = new Entity(temp, 2);
+        boardState[4][4] = new Entity(new int[] {P1Fac, 0}, 1);
+        boardState[15][15] = new Entity(new int[] {P2Fac, 0}, 2);
     }
     
 
@@ -114,13 +116,15 @@ public class MainGameLogic {
             }
         }else if(getBoardStateatLoc(selectedLoc).getTeam() == turn){
             if(selectMode == 1){
-                return("Please select an adjacent tile to move to (" + getBoardStateatLoc(selectedLoc).getMovesRemaining() + " Left)");
+                return("Please select an adjacent tile to move to. (" + getBoardStateatLoc(selectedLoc).getMovesRemaining() + " Left)");
             }else if(selectMode == 2){
                 if(!getBoardStateatLoc(selectedLoc).getHasAttkd()){
                     return("Please select an enemy within " + getBoardStateatLoc(selectedLoc).getAttkRange() + " tiles.");
                 }else{
                     return("This Creature has Already Attacked");
                 }
+            }else if(selectMode == 4){
+                return("Please select a tile to create the selected object.");
             }
         }else{
             return("Cannot Command Enemy Creature");
@@ -240,6 +244,27 @@ public class MainGameLogic {
             return("Start Turn");
         }else{
             return("End Turn");
+        }
+    }
+
+    public static String getSelectedStatsBasic() {
+        if(getBoardStateatLoc(selectedLoc).getTeam() == 0 || turn == 0){
+            return(null);
+        }else{
+            int currentHp = getBoardStateatLoc(selectedLoc).getHealth();
+            int maxHp = StatsIndex.getHealth(getBoardStateatLoc(selectedLoc).getID());
+            int attk = StatsIndex.getDamage(getBoardStateatLoc(selectedLoc).getID());
+            int range = StatsIndex.getAttkRange(getBoardStateatLoc(selectedLoc).getID());
+            int move = StatsIndex.getSpeed(getBoardStateatLoc(selectedLoc).getID());
+            return("Health: " + currentHp + "/" + maxHp + "\n" + "Damage: " + attk + "\n" + "Range: " + range + "\n" + "Speed: " + move);
+        }
+    }
+
+    public static void checkSelectedBuildable() {
+        if(getBoardStateatLoc(selectedLoc).getCanBuild()){
+            selectMode = 4;
+        }else{
+            selectMode = 0;
         }
     }
 }

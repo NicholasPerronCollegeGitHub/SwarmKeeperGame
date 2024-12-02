@@ -16,6 +16,7 @@ public class Entity {
      private boolean visible = true;
      private boolean empty = true;
      private boolean hasAttkd = false;
+     private boolean canBuild = false;
      private boolean capturable = false; //for resource nodes
      private int[] typeID = {0,0}; //1st indicates which faction, 2nd which unit for stats index
 
@@ -29,6 +30,7 @@ public class Entity {
           imgPath = StatsIndex.getImg(ID);
           portraitPath = StatsIndex.getPortrait(ID);
           attkRange = StatsIndex.getAttkRange(ID);
+          canBuild = StatsIndex.getCanBuild(ID);
           if(ID[0] == 0 && ID[1] == 0){
                empty = true;
           }
@@ -52,6 +54,7 @@ public class Entity {
           imgPath = StatsIndex.getImg(ID);
           portraitPath = StatsIndex.getPortrait(ID);
           attkRange = StatsIndex.getAttkRange(ID);
+          canBuild = StatsIndex.getCanBuild(ID);
           if(ID[0] == 1 || ID[1] == 2){
                capturable = true;
           }else{
@@ -75,6 +78,7 @@ public class Entity {
           empty = true;
           visible = false;
           capturable = false;
+          canBuild = false;
           typeID[0] = 0;
           typeID[1] = 0;
           Description = StatsIndex.getDesc(typeID);
@@ -124,6 +128,7 @@ public class Entity {
                     portraitPath = StatsIndex.getPortrait(typeID);
                     attkRange = StatsIndex.getAttkRange(typeID);
                     Description = StatsIndex.getDesc(typeID);
+                    canBuild = StatsIndex.getCanBuild(typeID);
                     }else{
                          team = 0;
                     health = StatsIndex.getHealth(typeID);
@@ -133,6 +138,7 @@ public class Entity {
                     imgPath = StatsIndex.getImg(typeID);
                     portraitPath = StatsIndex.getPortrait(typeID);
                     attkRange = StatsIndex.getAttkRange(typeID);
+                    canBuild = StatsIndex.getCanBuild(typeID);
                     }
                }else{
                     typeID[1] = 0;
@@ -145,6 +151,7 @@ public class Entity {
                     Description = StatsIndex.getDesc(typeID);
                     portraitPath = StatsIndex.getPortrait(typeID);
                     attkRange = StatsIndex.getAttkRange(typeID);
+                    canBuild = StatsIndex.getCanBuild(typeID);
                     empty = true;
                }
           }
@@ -179,5 +186,11 @@ public class Entity {
     }
 public int[] getID() {
      return(typeID);
+}
+public int getHealth() {
+     return(health);
+}
+public boolean getCanBuild() {
+     return(canBuild);
 }
 }

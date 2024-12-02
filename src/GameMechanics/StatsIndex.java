@@ -48,7 +48,7 @@ public class StatsIndex {
                 healthList[0][3] = 100;
                 speedList[0][3] = 4;
                 sightRangeList[0][3] = 2;
-                damageList[0][3] = 100;
+                damageList[0][3] = 50;
                 attkRangeList[0][3] = 4;
                 imgStubList[0][3] = "src\\Images\\Gameplay\\Units\\GamePiece\\Testling.png";
                 PortraitList[0][3] = "src\\Images\\Gameplay\\Units\\Portrait\\TestlingPortrait.png";
@@ -91,5 +91,9 @@ public class StatsIndex {
 
     public static String getDesc(int[] ID) {
         return(descList[ID[0]][ID[1]]);
+    }
+
+    public static boolean getCanBuild(int[] ID) {
+        return(canBuild[ID[0]][ID[1]]);
     }
 }

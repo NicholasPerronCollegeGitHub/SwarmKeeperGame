@@ -37,6 +37,7 @@ public class GameBoard {
         Label textOutput = new Label("Turn Start");
         Label bioResource = new Label("Bio: ");
         Label minResource = new Label("Min: ");
+        Label basicReadout = new Label();
         ImageView previewImage = new ImageView();
         try {
             Image prevImg = new Image(new FileInputStream("src\\Images\\Gameplay\\MapTiles\\Portrait\\UnknownTilePortrait.png"));
@@ -81,6 +82,7 @@ public class GameBoard {
                         }
                     }
                     textOutput.setText(MainGameLogic.getStatus());
+                    basicReadout.setText(MainGameLogic.getSelectedStatsBasic());
                 }
                 
             });
@@ -155,6 +157,16 @@ public class GameBoard {
             
         });
 
+        build.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent arg0) {
+                MainGameLogic.checkSelectedBuildable();
+                textOutput.setText(MainGameLogic.getStatus());
+            }
+            
+        });
+
         selectedInfo.setPrefHeight(100);
         selectedInfo.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -198,6 +210,7 @@ public class GameBoard {
 
         bottomBarMiddle.setBottom(textOutput);
         bottomBarMiddle.setLeft(previewImage);
+        bottomBarMiddle.setCenter(basicReadout);
 
         Scene gameBoard = new Scene(mainContent, 500, 500);
         return(gameBoard);
