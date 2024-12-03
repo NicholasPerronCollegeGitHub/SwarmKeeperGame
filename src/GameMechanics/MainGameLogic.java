@@ -211,8 +211,8 @@ public class MainGameLogic {
                 }
                 constructionSpecialMode = 0;
             }else if(constructionSpecialMode == 2){
-                if(getBoardStateatLoc(selectedLoc).getID()[0] == 0 && getBoardStateatLoc(selectedLoc).getID()[1] == 1 ){
-                    boardState[selectedLoc[0]][selectedLoc[2]] = new Entity(waitingUnitID);
+                if(getBoardStateatLoc(selectedLoc).getID()[0] == 0 && getBoardStateatLoc(selectedLoc).getID()[1] == 2 ){
+                    boardState[selectedLoc[0]][selectedLoc[1]] = new Entity(waitingUnitID);
                     if(turn == 1){
                         P1Bio -= CanBuildList.getCurrentBioCost();
                         P1Min -= CanBuildList.getCurrentMinCost();

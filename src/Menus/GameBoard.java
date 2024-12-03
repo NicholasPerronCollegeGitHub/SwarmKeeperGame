@@ -81,6 +81,8 @@ public class GameBoard {
                             }
                         }
                     }
+                    bioResource.setText("Bio: " + MainGameLogic.getCurrentBio());
+                    minResource.setText("Min: " + MainGameLogic.getCurrentMin());
                     textOutput.setText(MainGameLogic.getStatus());
                     basicReadout.setText(MainGameLogic.getSelectedStatsBasic());
                 }
@@ -143,6 +145,8 @@ public class GameBoard {
             public void handle(ActionEvent arg0) {
                 MainGameLogic.setSelectMode(1);
                 textOutput.setText(MainGameLogic.getStatus());
+                bioResource.setText("Bio: " + MainGameLogic.getCurrentBio());
+                minResource.setText("Min: " + MainGameLogic.getCurrentMin());
             }
             
         });
@@ -153,6 +157,9 @@ public class GameBoard {
             public void handle(ActionEvent arg0) {
                 MainGameLogic.setSelectMode(2);
                 textOutput.setText(MainGameLogic.getStatus());
+                bioResource.setText("Bio: " + MainGameLogic.getCurrentBio());
+                minResource.setText("Min: " + MainGameLogic.getCurrentMin());
+                
             }
             
         });
@@ -163,6 +170,8 @@ public class GameBoard {
             public void handle(ActionEvent arg0) {
                 MainGameLogic.checkSelectedBuildable();
                 textOutput.setText(MainGameLogic.getStatus());
+                bioResource.setText("Bio: " + MainGameLogic.getCurrentBio());
+                minResource.setText("Min: " + MainGameLogic.getCurrentMin());
             }
             
         });
