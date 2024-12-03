@@ -465,8 +465,8 @@ public class StatsIndex {
                 sightRangeList[4][6] = 1;
                 damageList[4][6] = 30;
                 attkRangeList[4][6] = 1;
-                imgStubList[4][6] = "";
-                PortraitList[4][6] = "";
+                imgStubList[4][6] = "src\\Images\\Gameplay\\Units\\GamePiece\\CrystallidWorkerTile.png";
+                PortraitList[4][6] = "src\\Images\\Gameplay\\Units\\Portrait\\CrystallidWorkerPortrait.png";
                 canBuild[4][6] = true;
                 descList[4][6] = "The crystallid nucleators work tirelessly to form the massive crystalline structures that the crystallids call home.";
             //Lens (scout)
@@ -475,8 +475,8 @@ public class StatsIndex {
                 sightRangeList[4][7] = 3;
                 damageList[4][7] = 20;
                 attkRangeList[4][7] = 1;
-                imgStubList[4][7] = "";
-                PortraitList[4][7] = "";
+                imgStubList[4][7] = "src\\Images\\Gameplay\\Units\\GamePiece\\CrystallidScoutTile.png";
+                PortraitList[4][7] = "src\\Images\\Gameplay\\Units\\Portrait\\CrystallidWorkerPortrait.png";
                 canBuild[4][7] = false;
                 descList[4][7] = "Lenses are quite fast for crystallid, using their speed and sight to scout for minerals to feed an ever growing hive.";
             //Shard (basic)
@@ -485,8 +485,8 @@ public class StatsIndex {
                 sightRangeList[4][8] = 1;
                 damageList[4][8] = 40;
                 attkRangeList[4][8] = 1;
-                imgStubList[4][8] = "";
-                PortraitList[4][8] = "";
+                imgStubList[4][8] = "src\\Images\\Gameplay\\Units\\GamePiece\\CrystallidBasicWarriorTile.png";
+                PortraitList[4][8] = "src\\Images\\Gameplay\\Units\\Portrait\\CrystallidBasicWarriorPortrait.png";
                 canBuild[4][8] = false;
                 descList[4][8] = "Though they are the smallest of the crystallid warriors, shards are still very durable thanks to their crystal-like shell.";
             //Prism (ranged)
@@ -495,8 +495,8 @@ public class StatsIndex {
                 sightRangeList[4][9] = 2;
                 damageList[4][9] = 70;
                 attkRangeList[4][9] = 3;
-                imgStubList[4][9] = "";
-                PortraitList[4][9] = "";
+                imgStubList[4][9] = "src\\Images\\Gameplay\\Units\\GamePiece\\CrystallidRangedWarriorTile.png";
+                PortraitList[4][9] = "src\\Images\\Gameplay\\Units\\Portrait\\CrystallidRangedWarriorPortrait.png";
                 canBuild[4][9] = false;
                 descList[4][9] = "Unique even among the exotic crystallid, the crysallid prisms are capable of focusing the harsh sunlight of their desert home into dangerous rays of energy.";
             //Geode (heavy armor, melee)
@@ -505,8 +505,8 @@ public class StatsIndex {
                 sightRangeList[4][10] = 1;
                 damageList[4][10] = 125;
                 attkRangeList[4][10] = 1;
-                imgStubList[4][10] = "";
-                PortraitList[4][10] = "";
+                imgStubList[4][10] = "src\\Images\\Gameplay\\Units\\GamePiece\\CrystallidHeavyWarriorTile.png";
+                PortraitList[4][10] = "src\\Images\\Gameplay\\Units\\Portrait\\CrystallidHeavyWarriorPortrait.png";
                 canBuild[4][10] = false;
                 descList[4][10] = "Incredibly sluggish, the titanic crystallid geode is incredibly durable, and has strength to match.";
     }
