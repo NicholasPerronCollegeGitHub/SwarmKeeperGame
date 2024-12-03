@@ -30,8 +30,8 @@ public class StatsIndex {
                 sightRangeList[1][0] = -1;
                 damageList[0][1] = 0;
                 attkRangeList[1][0] = 0;
-                imgStubList[0][1] = "";
-                PortraitList[0][1] = "";
+                imgStubList[0][1] = "src\\Images\\Gameplay\\MapTiles\\GamePiece\\BiomassDepositTile.png";
+                PortraitList[0][1] = "src\\Images\\Gameplay\\MapTiles\\Portrait\\BiomassDepositPortrait.png";
                 canBuild[0][1] = false;
                 descList[0][1] = "An area rich with flora and fauna, essential for the growth and mantainance of a hive."; 
             //Min. Deposit
@@ -40,8 +40,8 @@ public class StatsIndex {
                 sightRangeList[2][0] = -1;
                 damageList[0][2] = 0;
                 attkRangeList[2][0] = 0;
-                imgStubList[0][2] = "";
-                PortraitList[0][2] = "";
+                imgStubList[0][2] = "src\\Images\\Gameplay\\MapTiles\\GamePiece\\MineralDepositTile.png";
+                PortraitList[0][2] = "src\\Images\\Gameplay\\MapTiles\\Portrait\\MineralDepositPortrait.png";
                 canBuild[0][2] = false;
                 descList[0][2] = "An outcrop of particularly rich minerals, often used to reinforce the shells of larger creatures."; 
             //Testling <Exists for testing purposes only>
@@ -61,8 +61,8 @@ public class StatsIndex {
                 sightRangeList[1][0] = 3;
                 damageList[1][0] = 0;
                 attkRangeList[1][0] = 0;
-                imgStubList[1][0] = "";
-                PortraitList[1][0] = "";
+                imgStubList[1][0] = "src\\Images\\Gameplay\\Structures\\GamePiece\\TeraxiiMainHiveTile.png";
+                PortraitList[1][0] = "src\\Images\\Gameplay\\Structures\\Portrait\\TeraxiiMainHivePortrait.png";
                 canBuild[1][0] = true;
                 descList[1][0] = "The main hive of a terraxii swarm. Destruction of this leads to a victory for the opposing hive."; 
             //Bio Collect:

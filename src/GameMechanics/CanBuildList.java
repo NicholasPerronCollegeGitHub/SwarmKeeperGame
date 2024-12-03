@@ -176,6 +176,8 @@ public class CanBuildList {
                                     currentMinCost = 5;
                                     MainGameLogic.UnitCreate(new int[] {1,1});
                                     MainGameLogic.constructionSpecialMode = 1;
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -187,6 +189,8 @@ public class CanBuildList {
                                     currentMinCost = 5;
                                     MainGameLogic.UnitCreate(new int[] {1,2});
                                     MainGameLogic.constructionSpecialMode = 2;
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -197,6 +201,8 @@ public class CanBuildList {
                                     currentBioCost = 25;
                                     currentMinCost = 0;
                                     MainGameLogic.UnitCreate(new int[] {1,3});
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -207,6 +213,8 @@ public class CanBuildList {
                                     currentBioCost = 30;
                                     currentMinCost = 20;
                                     MainGameLogic.UnitCreate(new int[] {1,4});
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -217,6 +225,8 @@ public class CanBuildList {
                                     currentBioCost = 50;
                                     currentMinCost = 50;
                                     MainGameLogic.UnitCreate(new int[] {1,5});
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -242,6 +252,8 @@ public class CanBuildList {
                                 currentBioCost = 5;
                                 currentMinCost = 0;
                                 MainGameLogic.UnitCreate(new int[] {1,8});
+                                MainGameLogic.buildReturnValue(true);
+                                ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                             }
                             
                         });
@@ -267,6 +279,8 @@ public class CanBuildList {
                             currentBioCost = 15;
                             currentMinCost = 0;
                             MainGameLogic.UnitCreate(new int[] {1,9});
+                            MainGameLogic.buildReturnValue(true);
+                            ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                         }
                         
                     });
@@ -292,6 +306,8 @@ public class CanBuildList {
                             currentBioCost = 25;
                             currentMinCost = 30;
                             MainGameLogic.UnitCreate(new int[] {1,10});
+                            MainGameLogic.buildReturnValue(true);
+                            ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                         }
                         
                     });
@@ -397,6 +413,8 @@ public class CanBuildList {
                                     currentMinCost = 5;
                                     MainGameLogic.UnitCreate(new int[] {2,1});
                                     MainGameLogic.constructionSpecialMode = 1;
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -408,6 +426,8 @@ public class CanBuildList {
                                     currentMinCost = 5;
                                     MainGameLogic.UnitCreate(new int[] {2,2});
                                     MainGameLogic.constructionSpecialMode = 2;
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -418,6 +438,8 @@ public class CanBuildList {
                                     currentBioCost = 25;
                                     currentMinCost = 0;
                                     MainGameLogic.UnitCreate(new int[] {2,3});
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -428,6 +450,8 @@ public class CanBuildList {
                                     currentBioCost = 30;
                                     currentMinCost = 20;
                                     MainGameLogic.UnitCreate(new int[] {2,4});
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -438,6 +462,8 @@ public class CanBuildList {
                                     currentBioCost = 50;
                                     currentMinCost = 50;
                                     MainGameLogic.UnitCreate(new int[] {2,5});
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -463,6 +489,8 @@ public class CanBuildList {
                                 currentBioCost = 10;
                                 currentMinCost = 5;
                                 MainGameLogic.UnitCreate(new int[] {2,8});
+                                MainGameLogic.buildReturnValue(true);
+                                ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                             }
                             
                         });
@@ -488,6 +516,8 @@ public class CanBuildList {
                             currentBioCost = 30;
                             currentMinCost = 15;
                             MainGameLogic.UnitCreate(new int[] {2,9});
+                            MainGameLogic.buildReturnValue(true);
+                            ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                         }
                         
                     });
@@ -513,6 +543,8 @@ public class CanBuildList {
                             currentBioCost = 40;
                             currentMinCost = 50;
                             MainGameLogic.UnitCreate(new int[] {2,10});
+                            MainGameLogic.buildReturnValue(true);
+                            ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                         }
                         
                     });
@@ -619,6 +651,8 @@ public class CanBuildList {
                                     currentMinCost = 5;
                                     MainGameLogic.UnitCreate(new int[] {3,1});
                                     MainGameLogic.constructionSpecialMode = 1;
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -630,6 +664,8 @@ public class CanBuildList {
                                     currentMinCost = 5;
                                     MainGameLogic.UnitCreate(new int[] {3,2});
                                     MainGameLogic.constructionSpecialMode = 2;
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -640,6 +676,8 @@ public class CanBuildList {
                                     currentBioCost = 25;
                                     currentMinCost = 0;
                                     MainGameLogic.UnitCreate(new int[] {3,3});
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -650,6 +688,8 @@ public class CanBuildList {
                                     currentBioCost = 30;
                                     currentMinCost = 20;
                                     MainGameLogic.UnitCreate(new int[] {3,4});
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -660,6 +700,8 @@ public class CanBuildList {
                                     currentBioCost = 50;
                                     currentMinCost = 50;
                                     MainGameLogic.UnitCreate(new int[] {3,5});
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -685,6 +727,8 @@ public class CanBuildList {
                                 currentBioCost = 10;
                                 currentMinCost = 0;
                                 MainGameLogic.UnitCreate(new int[] {3,8});
+                                MainGameLogic.buildReturnValue(true);
+                                ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                             }
                             
                         });
@@ -710,6 +754,8 @@ public class CanBuildList {
                             currentBioCost = 20;
                             currentMinCost = 5;
                             MainGameLogic.UnitCreate(new int[] {3,9});
+                            MainGameLogic.buildReturnValue(true);
+                            ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                         }
                         
                     });
@@ -735,6 +781,8 @@ public class CanBuildList {
                             currentBioCost = 40;
                             currentMinCost = 25;
                             MainGameLogic.UnitCreate(new int[] {3,10});
+                            MainGameLogic.buildReturnValue(true);
+                            ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                         }
                         
                     });
@@ -842,6 +890,8 @@ public class CanBuildList {
                                     currentMinCost = 5;
                                     MainGameLogic.UnitCreate(new int[] {4,1});
                                     MainGameLogic.constructionSpecialMode = 1;
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -853,6 +903,8 @@ public class CanBuildList {
                                     currentMinCost = 5;
                                     MainGameLogic.UnitCreate(new int[] {4,2});
                                     MainGameLogic.constructionSpecialMode = 2;
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -863,6 +915,8 @@ public class CanBuildList {
                                     currentBioCost = 0;
                                     currentMinCost = 20;
                                     MainGameLogic.UnitCreate(new int[] {4,3});
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -873,6 +927,8 @@ public class CanBuildList {
                                     currentBioCost = 0;
                                     currentMinCost = 40;
                                     MainGameLogic.UnitCreate(new int[] {4,4});
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -883,6 +939,8 @@ public class CanBuildList {
                                     currentBioCost = 0;
                                     currentMinCost = 70;
                                     MainGameLogic.UnitCreate(new int[] {4,5});
+                                    MainGameLogic.buildReturnValue(true);
+                                    ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                                 }
                                 
                             });
@@ -908,6 +966,8 @@ public class CanBuildList {
                                 currentBioCost = 0;
                                 currentMinCost = 10;
                                 MainGameLogic.UnitCreate(new int[] {4,8});
+                                MainGameLogic.buildReturnValue(true);
+                                ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                             }
                             
                         });
@@ -933,6 +993,8 @@ public class CanBuildList {
                             currentBioCost = 0;
                             currentMinCost = 20;
                             MainGameLogic.UnitCreate(new int[] {4,9});
+                            MainGameLogic.buildReturnValue(true);
+                            ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                         }
                         
                     });
@@ -958,6 +1020,8 @@ public class CanBuildList {
                             currentBioCost = 0;
                             currentMinCost = 60;
                             MainGameLogic.UnitCreate(new int[] {4,10});
+                            MainGameLogic.buildReturnValue(true);
+                            ((Stage)(((Button)arg0.getSource()).getScene().getWindow())).close();
                         }
                         
                     });
