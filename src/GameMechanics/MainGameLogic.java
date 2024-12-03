@@ -42,9 +42,10 @@ public class MainGameLogic {
             }
         }
 
-        int[] temp = {0,3};
-        boardState[3][1] = new Entity(temp, 1);
-        boardState[4][2] = new Entity(temp, 2);
+    /*  int[] temp = {0,3};
+     *  boardState[3][1] = new Entity(temp, 1);
+     *  boardState[4][2] = new Entity(temp, 2);
+     */
     }
     
     public static void StartGame(){

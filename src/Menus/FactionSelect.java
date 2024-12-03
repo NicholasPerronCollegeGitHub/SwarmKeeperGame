@@ -142,16 +142,14 @@ public class FactionSelect {
 
                 TitledPane overView = new TitledPane("Overview", new Label("<OVERVIEW_GOES_HERE>"));
                 TitledPane strategy = new TitledPane("Strategy", new Label("STRATEGY_GOES_HERE"));
-                TitledPane techTree = new TitledPane("Nest Progression", new Label("TECHTREE_GOES_HERE"));
                 TitledPane unitList = new TitledPane("Full Unit/Structure List", new Label("UNIT_LIST_GOES_HERE"));
 
                 strategy.setExpanded(false);
-                techTree.setExpanded(false);
                 unitList.setExpanded(false);
 
                 InfoBorderContainer.setCenter(InfoContainer);
                 InfoBorderContainer.setBottom(close);
-                InfoContainer.getChildren().addAll(overView, strategy, techTree, unitList);
+                InfoContainer.getChildren().addAll(overView, strategy, unitList);
 
                 Stage InfoBox = new Stage();
                 InfoBox.setScene(Information);
@@ -223,16 +221,14 @@ public class FactionSelect {
 
                 TitledPane overView = new TitledPane("Overview", new Label("<OVERVIEW_GOES_HERE>"));
                 TitledPane strategy = new TitledPane("Strategy", new Label("STRATEGY_GOES_HERE"));
-                TitledPane techTree = new TitledPane("Nest Progression", new Label("TECHTREE_GOES_HERE"));
                 TitledPane unitList = new TitledPane("Full Unit/Structure List", new Label("UNIT_LIST_GOES_HERE"));
 
                 strategy.setExpanded(false);
-                techTree.setExpanded(false);
                 unitList.setExpanded(false);
 
                 InfoBorderContainer.setCenter(InfoContainer);
                 InfoBorderContainer.setBottom(close);
-                InfoContainer.getChildren().addAll(overView, strategy, techTree, unitList);
+                InfoContainer.getChildren().addAll(overView, strategy, unitList);
 
                 Stage InfoBox = new Stage();
                 InfoBox.setScene(Information);
@@ -304,16 +300,14 @@ public class FactionSelect {
 
                 TitledPane overView = new TitledPane("Overview", new Label("<OVERVIEW_GOES_HERE>"));
                 TitledPane strategy = new TitledPane("Strategy", new Label("STRATEGY_GOES_HERE"));
-                TitledPane techTree = new TitledPane("Nest Progression", new Label("TECHTREE_GOES_HERE"));
                 TitledPane unitList = new TitledPane("Full Unit/Structure List", new Label("UNIT_LIST_GOES_HERE"));
 
                 strategy.setExpanded(false);
-                techTree.setExpanded(false);
                 unitList.setExpanded(false);
 
                 InfoBorderContainer.setCenter(InfoContainer);
                 InfoBorderContainer.setBottom(close);
-                InfoContainer.getChildren().addAll(overView, strategy, techTree, unitList);
+                InfoContainer.getChildren().addAll(overView, strategy, unitList);
 
                 Stage InfoBox = new Stage();
                 InfoBox.setScene(Information);
@@ -386,16 +380,14 @@ public class FactionSelect {
 
                 TitledPane overView = new TitledPane("Overview", new Label("<OVERVIEW_GOES_HERE>"));
                 TitledPane strategy = new TitledPane("Strategy", new Label("STRATEGY_GOES_HERE"));
-                TitledPane techTree = new TitledPane("Nest Progression", new Label("TECHTREE_GOES_HERE"));
                 TitledPane unitList = new TitledPane("Full Unit/Structure List", new Label("UNIT_LIST_GOES_HERE"));
 
                 strategy.setExpanded(false);
-                techTree.setExpanded(false);
                 unitList.setExpanded(false);
 
                 InfoBorderContainer.setCenter(InfoContainer);
                 InfoBorderContainer.setBottom(close);
-                InfoContainer.getChildren().addAll(overView, strategy, techTree, unitList);
+                InfoContainer.getChildren().addAll(overView, strategy, unitList);
 
                 Stage InfoBox = new Stage();
                 InfoBox.setScene(Information);
