@@ -111,8 +111,8 @@ public class StatsIndex {
                 sightRangeList[1][5] = 2;
                 damageList[1][5] = 0;
                 attkRangeList[1][5] = 0;
-                imgStubList[1][5] = "";
-                PortraitList[1][5] = "";
+                imgStubList[1][5] = "src\\Images\\Gameplay\\Structures\\GamePiece\\TeraxiiHeavyWarNestTile.png";
+                PortraitList[1][5] = "src\\Images\\Gameplay\\Structures\\Portrait\\TeraxiiHeavyWarNestPortrait.png";
                 canBuild[1][5] = true;
                 descList[1][5] = "Home to the fearsome teraxii tyrants, large creatures specialized in crushing thick shells.";
                 
@@ -122,8 +122,8 @@ public class StatsIndex {
                 sightRangeList[1][6] = 1;
                 damageList[1][6] = 10;
                 attkRangeList[1][6] = 1;
-                imgStubList[1][6] = "";
-                PortraitList[1][6] = "";
+                imgStubList[1][6] = "src\\Images\\Gameplay\\Units\\GamePiece\\TeraxiiWorker.png";
+                PortraitList[1][6] = "src\\Images\\Gameplay\\Units\\Portrait\\TeraxiiWorkerPortrait.png";
                 canBuild[1][6] = true;
                 descList[1][6] = "The teraxii serf is a fragile creature, near useless in combat, but play an essential role in the maintainance and expansion of a hive.";
         
@@ -133,8 +133,8 @@ public class StatsIndex {
                 sightRangeList[1][7] = 3;
                 damageList[1][7] = 20;
                 attkRangeList[1][7] = 1;
-                imgStubList[1][7] = "";
-                PortraitList[1][7] = "";
+                imgStubList[1][7] = "src\\Images\\Gameplay\\Units\\GamePiece\\TeraxiiScout.png";
+                PortraitList[1][7] = "src\\Images\\Gameplay\\Units\\Portrait\\TeraxiiScoutPortrait.png";
                 canBuild[1][7] = false;
                 descList[1][7] = "The teraxii vanguard move far ahead of the rest of the swarm, using their superior vision to spot far off targets";
         
@@ -144,8 +144,8 @@ public class StatsIndex {
                 sightRangeList[1][8] = 1;
                 damageList[1][8] = 25;
                 attkRangeList[1][8] = 1;
-                imgStubList[1][8] = "";
-                PortraitList[1][8] = "";
+                imgStubList[1][8] = "src\\Images\\Gameplay\\Units\\GamePiece\\TeraxiiBasicWarrior.png";
+                PortraitList[1][8] = "src\\Images\\Gameplay\\Units\\Portrait\\TeraxiiBasicWarriorPortrait.png";
                 canBuild[1][8] = false;
                 descList[1][8] = "The lanceling are tiny creatures that overwhelm targets with numbers rather than strength, they surge forwards to defend their larger siblings from direct attack.";
         
@@ -155,8 +155,8 @@ public class StatsIndex {
                 sightRangeList[1][9] = 2;
                 damageList[1][9] = 100;
                 attkRangeList[1][9] = 2;
-                imgStubList[1][9] = "";
-                PortraitList[1][9] = "";
+                imgStubList[1][9] = "src\\Images\\Gameplay\\Units\\GamePiece\\TeraxiiRangedWarrior.png";
+                PortraitList[1][9] = "src/Images/Gameplay/Units/Portrait/TeraxiiRangedWarriorPortrait.png";
                 canBuild[1][9] = false;
                 descList[1][9] = "The arbalest are often found near the front-lines of conflict, spraying down enemies with caustic acid.";
             //Tyrant ()
@@ -165,8 +165,8 @@ public class StatsIndex {
                 sightRangeList[1][10] = 1;
                 damageList[1][10] = 125;
                 attkRangeList[1][10] = 1;
-                imgStubList[1][10] = "";
-                PortraitList[1][10] = "";
+                imgStubList[1][10] = "src\\Images\\Gameplay\\Units\\GamePiece\\TeraxiiHeavyWarrior.png";
+                PortraitList[1][10] = "src\\Images\\Gameplay\\Units\\Portrait\\TeraxiiHeavyWarriorPortrait.png";
                 canBuild[1][10] = false;
                 descList[1][10] = "The tyrant is a massive form of teraxii, crushing enemies under its' massive bulk, though it is a sluggish creature due to its bulky armor.";
             
