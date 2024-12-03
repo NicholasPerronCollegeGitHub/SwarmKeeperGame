@@ -232,7 +232,7 @@ public class CanBuildList {
                             });
                     }
                 //Basic Warrior Den
-                    if(ID[0] == 1 && ID[1] == 2){
+                    if(ID[0] == 1 && ID[1] == 3){
                         Button BuildWarrior = new Button("Lanceling 5B/0M");
                         buildButtons.getChildren().add(BuildWarrior);
                         if(MainGameLogic.getCurrentTurn() == 1){
@@ -259,7 +259,7 @@ public class CanBuildList {
                         });
                     }
                 //Ranged Warrior Den
-                if(ID[0] == 1 && ID[1] == 3){
+                if(ID[0] == 1 && ID[1] == 4){
                     Button BuildWarrior = new Button("Arbalest 15B/0M");
                     buildButtons.getChildren().add(BuildWarrior);
                     if(MainGameLogic.getCurrentTurn() == 1){
@@ -286,7 +286,7 @@ public class CanBuildList {
                     });
                 }
                 //Heavy Warrior Den
-                if(ID[0] == 1 && ID[1] == 4){
+                if(ID[0] == 1 && ID[1] == 5){
                     Button BuildWarrior = new Button("Tyrant 25B/30M");
                     buildButtons.getChildren().add(BuildWarrior);
                     if(MainGameLogic.getCurrentTurn() == 1){
@@ -469,7 +469,7 @@ public class CanBuildList {
                             });
                     }
                     //Basic Warrior Den
-                    if(ID[0] == 2 && ID[1] == 2){
+                    if(ID[0] == 2 && ID[1] == 3){
                         Button BuildWarrior = new Button("Scorpio 10B/5M");
                         buildButtons.getChildren().add(BuildWarrior);
                         if(MainGameLogic.getCurrentTurn() == 1){
@@ -496,7 +496,7 @@ public class CanBuildList {
                         });
                     }
                 //Ranged Warrior Den
-                if(ID[0] == 2 && ID[1] == 3){
+                if(ID[0] == 2 && ID[1] == 4){
                     Button BuildWarrior = new Button("Ballista 30B/15M");
                     buildButtons.getChildren().add(BuildWarrior);
                     if(MainGameLogic.getCurrentTurn() == 1){
@@ -523,7 +523,7 @@ public class CanBuildList {
                     });
                 }
                 //Heavy Warrior Den
-                if(ID[0] == 2 && ID[1] == 4){
+                if(ID[0] == 2 && ID[1] == 5){
                     Button BuildWarrior = new Button("Trebuchet 40B/50M");
                     buildButtons.getChildren().add(BuildWarrior);
                     if(MainGameLogic.getCurrentTurn() == 1){
@@ -707,7 +707,7 @@ public class CanBuildList {
                             });
                     }
                     //Basic Warrior Den
-                    if(ID[0] == 3 && ID[1] == 2){
+                    if(ID[0] == 3 && ID[1] == 3){
                         Button BuildWarrior = new Button("Locust 10B/0M");
                         buildButtons.getChildren().add(BuildWarrior);
                         if(MainGameLogic.getCurrentTurn() == 1){
@@ -734,7 +734,7 @@ public class CanBuildList {
                         });
                     }
                 //Ranged Warrior Den
-                if(ID[0] == 3 && ID[1] == 3){
+                if(ID[0] == 3 && ID[1] == 4){
                     Button BuildWarrior = new Button("Mosquito 20B/5M");
                     buildButtons.getChildren().add(BuildWarrior);
                     if(MainGameLogic.getCurrentTurn() == 1){
@@ -761,7 +761,7 @@ public class CanBuildList {
                     });
                 }
                 //Heavy Warrior Den
-                if(ID[0] == 3 && ID[1] == 4){
+                if(ID[0] == 3 && ID[1] == 5){
                     Button BuildWarrior = new Button("Hornet 40B/25M");
                     buildButtons.getChildren().add(BuildWarrior);
                     if(MainGameLogic.getCurrentTurn() == 1){
@@ -946,7 +946,7 @@ public class CanBuildList {
                             });
                     }
                     //Basic Warrior Den
-                    if(ID[0] == 4 && ID[1] == 2){
+                    if(ID[0] == 4 && ID[1] == 3){
                         Button BuildWarrior = new Button("Shard 0B/10M");
                         buildButtons.getChildren().add(BuildWarrior);
                         if(MainGameLogic.getCurrentTurn() == 1){
@@ -973,7 +973,7 @@ public class CanBuildList {
                         });
                     }
                 //Ranged Warrior Den
-                if(ID[0] == 4 && ID[1] == 3){
+                if(ID[0] == 4 && ID[1] == 4){
                     Button BuildWarrior = new Button("Prism 0B/20M");
                     buildButtons.getChildren().add(BuildWarrior);
                     if(MainGameLogic.getCurrentTurn() == 1){
@@ -1000,7 +1000,7 @@ public class CanBuildList {
                     });
                 }
                 //Heavy Warrior Den
-                if(ID[0] == 4 && ID[1] == 4){
+                if(ID[0] == 4 && ID[1] == 5){
                     Button BuildWarrior = new Button("Geode 0B/60M");
                     buildButtons.getChildren().add(BuildWarrior);
                     if(MainGameLogic.getCurrentTurn() == 1){

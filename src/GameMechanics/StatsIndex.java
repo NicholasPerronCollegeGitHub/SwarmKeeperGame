@@ -71,8 +71,8 @@ public class StatsIndex {
                 sightRangeList[1][1] = 2;
                 damageList[1][1] = 0;
                 attkRangeList[1][1] = 0;
-                imgStubList[1][1] = "";
-                PortraitList[1][1] = "";
+                imgStubList[1][1] = "src\\Images\\Gameplay\\Structures\\GamePiece\\TeraxiiBiomassTile.png";
+                PortraitList[1][1] = "src\\Images\\Gameplay\\Structures\\Portrait\\TeraxiiBiomassDeposit.png";
                 canBuild[1][1] = false;
                 descList[1][1] = "A terraxii-controlled area for collecting the biomass to feed their vast swarms."; 
             //Min collect:
@@ -81,8 +81,8 @@ public class StatsIndex {
                 sightRangeList[1][2] = 2;
                 damageList[1][2] = 0;
                 attkRangeList[1][2] = 0;
-                imgStubList[1][2] = "";
-                PortraitList[1][2] = "";
+                imgStubList[1][2] = "src\\Images\\Gameplay\\Structures\\GamePiece\\TeraxiiMineralTile.png";
+                PortraitList[1][2] = "src\\Images\\Gameplay\\Structures\\Portrait\\TeraxiiMineralDeposit.png";
                 canBuild[1][2] = false;
                 descList[1][2] = "Though sparsely used, minerals are still neccessary for the teraxii's larger strains."; 
             //Lanceling spawning pool
@@ -91,8 +91,8 @@ public class StatsIndex {
                 sightRangeList[1][3] = 2;
                 damageList[1][3] = 0;
                 attkRangeList[1][3] = 0;
-                imgStubList[1][3] = "";
-                PortraitList[1][3] = "";
+                imgStubList[1][3] = "src\\Images\\Gameplay\\Structures\\GamePiece\\TeraxiiBasicWarNestTile.png";
+                PortraitList[1][3] = "src\\Images\\Gameplay\\Structures\\Portrait\\TeraxiiBasicWarNestPortrait.png";
                 canBuild[1][3] = true;
                 descList[1][3] = "The lanceling spawning pool is a sprawling nest structure created to spew short-lived lanceling to overrun enemies.";
             //Arbalest nest
@@ -101,8 +101,8 @@ public class StatsIndex {
                 sightRangeList[1][4] = 2;
                 damageList[1][4] = 0;
                 attkRangeList[1][4] = 0;
-                imgStubList[1][4] = "";
-                PortraitList[1][4] = "";
+                imgStubList[1][4] = "src\\Images\\Gameplay\\Structures\\GamePiece\\TeraxiiRangedWarNestTile.png";
+                PortraitList[1][4] = "src\\Images\\Gameplay\\Structures\\Portrait\\TeraxiiRangedWarNestPortrait.png";
                 canBuild[1][4] = true;
                 descList[1][4] = "The arbalest nest allows for the growth of the short ranged yet dangerous teraxii arbalests.";
             //Tyrant Den
@@ -168,7 +168,7 @@ public class StatsIndex {
                 imgStubList[1][10] = "";
                 PortraitList[1][10] = "";
                 canBuild[1][10] = false;
-                descList[1][10] = "The tyrant is a massive form of teraxii, crushing enemies under its' massive bulk, though it is a sluggish creature due  to its armor.";
+                descList[1][10] = "The tyrant is a massive form of teraxii, crushing enemies under its' massive bulk, though it is a sluggish creature due to its bulky armor.";
             
         
         //Faction 2: Fortis
