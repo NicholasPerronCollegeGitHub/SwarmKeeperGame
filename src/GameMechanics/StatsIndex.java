@@ -171,7 +171,7 @@ public class StatsIndex {
                 descList[1][10] = "The tyrant is a massive form of teraxii, crushing enemies under its' massive bulk, though it is a sluggish creature due to its bulky armor.";
             
         
-        //Faction 2: Fortis
+        //Faction 2: Fortis <CUT FOR TIME> (Images)
             //Main Base:
                 healthList[2][0] = 1000;
                 speedList[2][0] = 0;
@@ -286,7 +286,7 @@ public class StatsIndex {
                 descList[2][10] = "Though essentially blind on their own, the trebuchet can anihilate almost anything with the help of another creature to direct it.";
             
         
-        //Faction 3: Vespidian
+        //Faction 3: Vespidian  <CUT FOR TIME> (Images)
             //Main Base:
                 healthList[3][0] = 1000;
                 speedList[3][0] = 0;
@@ -405,8 +405,8 @@ public class StatsIndex {
                 sightRangeList[4][0] = 3;
                 damageList[4][0] = 0;
                 attkRangeList[4][0] = 0;
-                imgStubList[4][0] = "";
-                PortraitList[4][0] = "";
+                imgStubList[4][0] = "src\\Images\\Gameplay\\Structures\\GamePiece\\CrystallidMainHiveTile.png";
+                PortraitList[4][0] = "src\\Images\\Gameplay\\Structures\\Portrait\\CrystallidMainHivePortrait.png";
                 canBuild[4][0] = true;
                 descList[4][0] = "The main hive of a Crystallid swarm. Destruction of this leads to a victory for the opposing hive."; 
             //Bio Collect:
@@ -415,8 +415,8 @@ public class StatsIndex {
                 sightRangeList[4][1] = 2;
                 damageList[4][1] = 50;
                 attkRangeList[4][1] = 4;
-                imgStubList[4][1] = "";
-                PortraitList[4][1] = "";
+                imgStubList[4][1] = "src\\Images\\Gameplay\\Structures\\GamePiece\\CrystallidBiomassTile.png";
+                PortraitList[4][1] = "src\\Images\\Gameplay\\Structures\\Portrait\\CrystallidBiomassDeposit.png";
                 canBuild[4][1] = false;
                 descList[4][1] = "Though the crystallid have no need for biomass, these specialized structures can still convert it to a potent acid which can be launched at far ranges to discourage would-be invaders.";
             //Min Collect:
@@ -425,8 +425,8 @@ public class StatsIndex {
                 sightRangeList[4][2] = 2;
                 damageList[4][2] = 0;
                 attkRangeList[4][2] = 0;
-                imgStubList[4][2] = "";
-                PortraitList[4][2] = "";
+                imgStubList[4][2] = "src\\Images\\Gameplay\\Structures\\GamePiece\\CrystallidMineralTile.png";
+                PortraitList[4][2] = "src\\Images\\Gameplay\\Structures\\Portrait\\CrystallidMineralDeposit.png";
                 canBuild[4][2] = false;
                 descList[4][2] = "Due to their unique biology, crystallids depend on mineral deposits like this one instead of organic matter.";
             //Shard den ()
@@ -435,8 +435,8 @@ public class StatsIndex {
                 sightRangeList[4][3] = 2;
                 damageList[4][3] = 0;
                 attkRangeList[4][3] = 0;
-                imgStubList[4][3] = "";
-                PortraitList[4][3] = "";
+                imgStubList[4][3] = "src\\Images\\Gameplay\\Structures\\GamePiece\\CrystallidBasicWarNestTile.png";
+                PortraitList[4][3] = "src\\Images\\Gameplay\\Structures\\Portrait\\CrystallidBasicWarNestPortrait.png";
                 canBuild[4][3] = true;
                 descList[4][3] = "Home of the crystallid shards, the smallest of the crystallid warrior castes.";
             //Prism warren ()
@@ -445,8 +445,8 @@ public class StatsIndex {
                 sightRangeList[4][4] = 2;
                 damageList[4][4] = 0;
                 attkRangeList[4][4] = 0;
-                imgStubList[4][4] = "";
-                PortraitList[4][4] = "";
+                imgStubList[4][4] = "src\\Images\\Gameplay\\Structures\\GamePiece\\CrystallidRangedWarNestTile.png";
+                PortraitList[4][4] = "src\\Images\\Gameplay\\Structures\\Portrait\\CrystallidRangedWarNestPortrait.png";
                 canBuild[4][4] = true;
                 descList[4][4] = "Crystallid prisms are made here, creatures capable of focusing light into a weapon.";
             //Geode cavern ()
@@ -455,10 +455,10 @@ public class StatsIndex {
                 sightRangeList[4][5] = 2;
                 damageList[4][5] = 0;
                 attkRangeList[4][5] = 0;
-                imgStubList[4][5] = "";
-                PortraitList[4][5] = "";
+                imgStubList[4][5] = "src\\Images\\Gameplay\\Structures\\GamePiece\\CrystallidHeavyWarNestTile.png";
+                PortraitList[4][5] = "src\\Images\\Gameplay\\Structures\\Portrait\\CrystallidHeavyWarNestPortrait.png";
                 canBuild[4][5] = true;
-                descList[4][5] = "This massive nest homes the behemoth crystallid geodes.";
+                descList[4][5] = "This massive nest houses the behemoth crystallid geodes.";
             //Nucleator (worker (based on 1st stage of crystal formation))
                 healthList[4][6] = 50;
                 speedList[4][6] = 1;
