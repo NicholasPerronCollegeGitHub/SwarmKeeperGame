@@ -5,11 +5,7 @@
         "lib/**/*.jar",
         "c:\\Users\\nicks\\Desktop\\Java class stuff\\JavaFX\\javafx-sdk-23.0.1\\lib\\javafx.base.jar",
         "c:\\Users\\nicks\\Desktop\\Java class stuff\\JavaFX\\javafx-sdk-23.0.1\\lib\\javafx.controls.jar",
-        "c:\\Users\\nicks\\Desktop\\Java class stuff\\JavaFX\\javafx-sdk-23.0.1\\lib\\javafx.fxml.jar",
         "c:\\Users\\nicks\\Desktop\\Java class stuff\\JavaFX\\javafx-sdk-23.0.1\\lib\\javafx.graphics.jar",
-        "c:\\Users\\nicks\\Desktop\\Java class stuff\\JavaFX\\javafx-sdk-23.0.1\\lib\\javafx.media.jar",
-        "c:\\Users\\nicks\\Desktop\\Java class stuff\\JavaFX\\javafx-sdk-23.0.1\\lib\\javafx.swing.jar",
-        "c:\\Users\\nicks\\Desktop\\Java class stuff\\JavaFX\\javafx-sdk-23.0.1\\lib\\javafx.web.jar",
-        "c:\\Users\\nicks\\Desktop\\Java class stuff\\JavaFX\\javafx-sdk-23.0.1\\lib\\javafx-swt.jar"
+        "c:\\Users\\nicks\\Desktop\\Java class stuff\\JavaFX\\javafx-sdk-23.0.1\\lib\\javafx.media.jar"
     ]
 }

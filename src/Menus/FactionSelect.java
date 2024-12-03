@@ -50,6 +50,9 @@ public class FactionSelect {
         VBox fac3Btns = new VBox(fac3Info,fac3Select);
         VBox fac4Btns = new VBox(fac4Info,fac4Select);
 
+        fac2Select.setDisable(true); //Had to be cut for time, eveything is coded, but no artwork was created
+        fac3Select.setDisable(true);
+
         try {
             ImageView Fac1img = new ImageView(new Image(new FileInputStream("src\\Images\\Fac1prev.png")));
             Fac1img.setX(400);
