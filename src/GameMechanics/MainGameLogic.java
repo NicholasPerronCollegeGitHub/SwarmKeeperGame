@@ -63,8 +63,9 @@ public class MainGameLogic {
 
         int x = 0;
         int y = 0;
-        boardState[4][4] = new Entity(new int[] {P1Fac, 0}, 1);
+        boardState[4][4] = new Entity(new int[] {P1Fac, 0}, 1); //create player main structures
         boardState[15][15] = new Entity(new int[] {P2Fac, 0}, 2);
+
         while(quad1Bio < 4 || quad2Bio < 4 || quad3Bio < 4 || quad4Bio < 4 ){  //generate Bio. deposits (4 per quadrant)
             if(quad1Bio < 4){
                 x = rand.nextInt(9);
